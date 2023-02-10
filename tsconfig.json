@@ -4,15 +4,14 @@
     "module": "esnext",
     "moduleResolution": "node",
     "isolatedModules": true,
-    "resolveJsonModule": true,
-    "strict": true,
-    "jsx": "preserve",
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true, 
+    "jsx": "preserve",  
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "~/*": ["build/*"],
-      "#/*": ["types/*"]
+      "#/*": ["types/*"],
+      "~/*": ["build/*"]
     },
     "lib": ["dom", "esnext"],
     "types": ["node", "vite/client"]
