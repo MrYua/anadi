@@ -1,8 +1,8 @@
 import { type ConfigEnv, type PluginOption } from "vite";
-import jsx from "@vitejs/plugin-vue";
+import vue from "@vitejs/plugin-vue";
+import tsAlias from "./tsAlias";
 
 export function createVitePlugins(env: ConfigEnv): PluginOption[] {
-  const plugins = [jsx()];
-  console.log(111);
+  const plugins = [vue(), tsAlias()];
   return plugins;
 }

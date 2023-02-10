@@ -4,8 +4,10 @@
     "module": "esnext",
     "moduleResolution": "node",
     "isolatedModules": true,
-    "strict": true,
-    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true, 
+    "/**/strict": true,
+    "jsx": "preserve",  
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
