@@ -8,7 +8,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "#/*": ["types/*"],
+      "~/*": ["build/*"]
     },
     "lib": ["dom", "esnext"],
     "types": ["node", "vite/client"]
