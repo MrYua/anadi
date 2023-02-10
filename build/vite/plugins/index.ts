@@ -5,5 +5,6 @@ import tsAlias from "./tsAlias";
 
 export function createVitePlugins(env: ConfigEnv): PluginOption[] {
   const plugins = [vue(), tsAlias()];
+  1
   return plugins;
 }
