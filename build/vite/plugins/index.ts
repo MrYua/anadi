@@ -1,10 +1,22 @@
-import path from "path";
-import { type ConfigEnv, type PluginOption } from "vite";
+import { type PluginOption } from "vite";
 import vue from "@vitejs/plugin-vue";
+import jsx from "@vitejs/plugin-vue-jsx";
+import macros from "unplugin-vue-macros/vite";
 import tsAlias from "./tsAlias";
+import html from "./html";
 
-export function createVitePlugins(env: ConfigEnv): PluginOption[] {
-  const plugins = [vue(), tsAlias()];
-  1
+export function createVitePlugins(viteEnv: ViteEnv) {
+  const plugins: (PluginOption | PluginOption[])[] = [
+    macros({
+      hoistStatic:true,
+      plugins: {
+        vue: vue(),
+        vueJsx: jsx(),
+      },
+    }),
+    tsAlias(),
+    html(),
+  ];
+
   return plugins;
 }

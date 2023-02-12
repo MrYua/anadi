@@ -6,9 +6,14 @@ import { NODE_ROOT as root } from "./build/path";
 export default defineConfig(async (env: ConfigEnv) => {
   return {
     root,
-    plugins: createVitePlugins(env),
+    plugins: createVitePlugins({
+      VITE_HTTPS: "none",
+    }),
     resolve: {
       alias: createViteAlias(),
+    },
+    build: {
+     
     },
   };
 });

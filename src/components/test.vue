@@ -1,7 +1,7 @@
-<template>
-  <div>332123</div>
-</template>
-
-<script lang="ts" setup>
-
+<script setup lang="tsx">
+defineOptions({
+  render() {
+    return <h1>Hello World</h1>
+  },
+})
 </script>

@@ -1,10 +1,14 @@
-import { readFileSync } from "fs";
 import { type Plugin, type AliasOptions } from "vite";
+import { readJSON } from "../../utilities/readJSON";
 import { getProperty } from "../../utilities/path";
 
 interface CompilerOptions {
   baseUrl?: string;
   paths?: Record<string, string[]>;
+}
+
+interface TsConfig {
+  compilerOptions: CompilerOptions;
 }
 
 interface Options {
@@ -16,23 +20,21 @@ export function tsAliasPlugin(options: Options = {}): Plugin {
   return {
     name: "vite:ts-alias",
     enforce: "pre",
-    async config(config) {
-      const alias = [
-        {
-          find: "@",
-          replacement: getProperty("src"),
-        },
-      ];
+    async config() {
+      const { dir = "tsconfig.json", alias: sourceAlias } = options;
 
-      const tsconfig = readFileSync(getProperty("tsconfig.json"), "utf-8");
+      const { baseUrl, paths } = readJSON<TsConfig>(dir).compilerOptions;
 
-      tsconfig.split('').forEach(element => {
-        console.log(element)
+      const alias = Object.entries(paths).map(([key, value]) => {
+        return {
+          find: key.replace("/*", ""),
+          replacement: getProperty(value[0].replace(/\/\*/, ""), baseUrl),
+        };
       });
 
       return {
         resolve: {
-          alias,
+          alias: sourceAlias || alias,
         },
       };
     },
