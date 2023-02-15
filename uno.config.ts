@@ -12,12 +12,10 @@ export default defineConfig({
     "build",
   ],
   presets: [presetUno()],
-  shortcuts: {
-    "wh-full": "w-full h-full",
-  },
+  shortcuts: {},
   theme: {
     colors: {
-        primary: 'var(--primary-color)',
+     
     },
   },
 });
