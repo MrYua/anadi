@@ -5,9 +5,14 @@
   "devDependencies": {
     "lerna": "^6.5.1"
   },
-  "packageManager": "pnpm@7.27.0",
+  "packageManager": "pnpm@7.27.1",
   "engines": {
     "node": ">=14",
     "pnpm": ">=6.20.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": ["webpack"]
+    }
   }
 }
