@@ -3,7 +3,8 @@
   "private": true,
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^6.5.1"
+    "lerna": "^6.5.1",
+    "typescript": "^4.9.5"
   },
   "packageManager": "pnpm@7.27.1",
   "engines": {
@@ -12,7 +13,10 @@
   },
   "pnpm": {
     "peerDependencyRules": {
-      "ignoreMissing": ["webpack"]
+      "ignoreMissing": [
+        "webpack",
+        "vue"
+      ]
     }
   }
 }
