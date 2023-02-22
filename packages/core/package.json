@@ -1,5 +1,5 @@
 {
-  "name": "anadi-core",
+  "name": "@anadi/core",
   "version": "1.0.0",
   "type": "module",
   "private": true,
@@ -7,7 +7,13 @@
   "keywords": [
     "vue",
     "nuxt",
-    "nuxt3"
+    "nuxt3",
+    "draggable",
+    "dom",
+    "javascript",
+    "typescript",
+    "anadi",
+    "@anadi/core"
   ],
   "sideEffects": false,
   "scripts": {
