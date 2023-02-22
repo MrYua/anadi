@@ -4,6 +4,12 @@
   "type": "module",
   "private": true,
   "license": "MIT",
+  "keywords": [
+    "vue",
+    "nuxt",
+    "nuxt3"
+  ],
+  "sideEffects": false,
   "scripts": {
     "build": "tsc"
   }

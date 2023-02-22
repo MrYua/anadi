@@ -1,6 +1,5 @@
 <template>
   <div class="palette">
-    <draggable />
   </div>
 </template>
 
@@ -15,8 +14,5 @@
   border: 1px solid red;
   margin: 10px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>
