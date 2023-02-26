@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "license": "MIT",
+  "main": "draggable/index.ts",
   "keywords": [
     "vue",
     "nuxt",
