@@ -11,24 +11,72 @@
 <body>
 
     <style>
-        .element {
+        html {
+            border: 1px solid red;
+        }
+
+        body {
+            border: 1px solid red;
+        }
+
+        .border-element {
             width: 100px;
             height: 100px;
+            padding: 10px;
             margin: 10px;
             border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .content-element {
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid blue;
+            box-sizing: content-box;
+        }
+
+        .border__wrapper {
+            padding: 20px;
+        }
+
+        .content__wrapper {
+            padding: 20px;
         }
     </style>
 
-    <div class="element"></div>
+
+    <div class="border__wrapper">
+        <div class="border-element"></div>
+    </div>
+
+
+
+    <div class="content__wrapper">
+        <div class="content-element"></div>
+    </div>
+
 
     <script>
-        function getMeta(el) {
-            const meta = el.getBoundingClientRect()
+        function getElementMeta(target,) {
+            const offsetWidth = target.offsetWidth
+            const offsetLeft = target.offsetLeft
+            const clientWidth = target.clientWidth
 
-            console.log(meta)
+            console.log(target.offsetParent.padding)
+
+            console.log(`offsetWidth:${offsetWidth}`, `offsetLeft:${offsetLeft}`, `clientWidth:${clientWidth}`)
         }
 
-        getMeta(document.querySelector('.element'))
+
+        getElementMeta(document.querySelector('.border-element'))
+
+        getElementMeta(document.querySelector('.content-element'))
+
+        document.querySelector('.border-element').addEventListener('mouseup', (event) => {
+            console.log(event)
+        })
     </script>
 </body>
 
