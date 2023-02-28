@@ -9,74 +9,54 @@
 </head>
 
 <body>
-
     <style>
-        html {
-            border: 1px solid red;
-        }
-
+        html,
         body {
-            border: 1px solid red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
         }
 
-        .border-element {
-            width: 100px;
-            height: 100px;
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid red;
-            box-sizing: border-box;
-        }
-
-        .content-element {
-            width: 100px;
-            height: 100px;
-            padding: 10px;
-            margin: 10px;
-            border: 1px solid blue;
-            box-sizing: content-box;
-        }
-
-        .border__wrapper {
-            padding: 20px;
-        }
-
-        .content__wrapper {
-            padding: 20px;
+        .app {
+            background-image:
+                conic-gradient(at calc(100% - 1px) calc(100% - 1px), #ebecf2 270deg, transparent 0);
+            width: 100%;
+            height: 100%;
         }
     </style>
 
+    <div class="app">
 
-    <div class="border__wrapper">
-        <div class="border-element"></div>
     </div>
-
-
-
-    <div class="content__wrapper">
-        <div class="content-element"></div>
-    </div>
-
 
     <script>
-        function getElementMeta(target,) {
-            const offsetWidth = target.offsetWidth
-            const offsetLeft = target.offsetLeft
-            const clientWidth = target.clientWidth
+        const DEFAULT_OPTIONS = {
+            col: 24,
+            rowHeight: 10,
+            maxRows: Infinity,
+            margin: 10
+        }
 
-            console.log(target.offsetParent.padding)
+        function getElementMeta(el) {
+            const height = el.offsetHeight
+            const width = el.offsetWidth
 
-            console.log(`offsetWidth:${offsetWidth}`, `offsetLeft:${offsetLeft}`, `clientWidth:${clientWidth}`)
+            return {
+                height,
+                width
+            }
+        }
+
+        function renderGrid() {
+            const { height, width } = getElementMeta(document.querySelector('.app'))
+
+            document.querySelector('.app').style['background-size'] = `${100/24}% 10px`
         }
 
 
-        getElementMeta(document.querySelector('.border-element'))
-
-        getElementMeta(document.querySelector('.content-element'))
-
-        document.querySelector('.border-element').addEventListener('mouseup', (event) => {
-            console.log(event)
-        })
+        renderGrid()
     </script>
 </body>
 
