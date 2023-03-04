@@ -5,5 +5,8 @@
   "packageManager": "pnpm@7.28.0",
   "engines": {
     "pnpm": ">=7.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
   }
 }

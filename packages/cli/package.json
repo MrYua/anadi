@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
+  "bin": {
+    "ori": "dist/bin/anadi.js"
+  },
+  "main": "dist/bin/anadi.js",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
+  },
+  "dependencies": {
+    "commander": "^10.0.0"
   }
 }
