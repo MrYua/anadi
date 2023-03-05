@@ -1,11 +1,15 @@
 node_modules
-dist
 
-
+.anadi
 .idea
 .vscode
-.history
 *.log
 .DS_Store
-package-lock.json
+
+site
+lib
+es
+umd
+coverage
+highlight
 
