@@ -25,6 +25,7 @@ importers:
       ramda: ^0.28.0
       vite: ^4.1.4
       vue: ^3.2.47
+      vue-router: 4.0.12
     dependencies:
       colors: 1.4.0
       commander: 10.0.0
@@ -34,6 +35,7 @@ importers:
       ramda: 0.28.0
       vite: 4.1.4_@types+node@18.14.6
       vue: 3.2.47
+      vue-router: 4.0.12_vue@3.2.47
     devDependencies:
       '@types/fs-extra': 11.0.1
       '@types/inquirer': 9.0.3
@@ -338,6 +340,10 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.47
       '@vue/shared': 3.2.47
+    dev: false
+
+  /@vue/devtools-api/6.5.0:
+    resolution: {integrity: sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==}
     dev: false
 
   /@vue/reactivity-transform/3.2.47:
@@ -882,6 +888,15 @@ packages:
       rollup: 3.18.0
     optionalDependencies:
       fsevents: 2.3.2
+    dev: false
+
+  /vue-router/4.0.12_vue@3.2.47:
+    resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==}
+    peerDependencies:
+      vue: ^3.0.0
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      vue: 3.2.47
     dev: false
 
   /vue/3.2.47:
