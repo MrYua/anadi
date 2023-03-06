@@ -6,7 +6,7 @@
   "license": "MIT",
   "author": "Mr_GaoYu <Mr_GaoYu@163.com>",
   "bin": {
-    "ori": "dist/bin/anadi.js"
+    "anadi": "dist/bin/anadi.js"
   },
   "main": "dist/bin/anadi.js",
   "engines": {
