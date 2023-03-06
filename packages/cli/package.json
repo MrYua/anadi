@@ -1,0 +1,29 @@
+{
+  "name": "@anadi/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "cli of anadi",
+  "license": "MIT",
+  "author": "Mr_GaoYu <Mr_GaoYu@163.com>",
+  "bin": {
+    "ori": "dist/bin/anadi.js"
+  },
+  "main": "dist/bin/anadi.js",
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "cli",
+    "anadi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrYua/anadi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrYua/anadi/issues"
+  }
+}
