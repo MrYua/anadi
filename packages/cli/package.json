@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/MrYua/anadi/issues"
+  },
+  "dependencies": {
+    "commander": "^10.0.0"
   }
 }
