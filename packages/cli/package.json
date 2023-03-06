@@ -9,6 +9,10 @@
     "anadi": "dist/bin/anadi.js"
   },
   "main": "dist/bin/anadi.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc"
+  },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
@@ -27,6 +31,11 @@
     "url": "https://github.com/MrYua/anadi/issues"
   },
   "dependencies": {
-    "commander": "^10.0.0"
+    "commander": "^10.0.0",
+    "fs-extra": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.14.6"
   }
 }
