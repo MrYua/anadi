@@ -22,7 +22,7 @@ async function bootstrap() {
     .action(async (name: string, command: Command) => {
       const { gen } = await import("../src/commands/gen.js");
 
-      return gen({ ...command, name });
+      return gen({ ...command });
     });
 
   program.parse();
