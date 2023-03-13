@@ -1,5 +1,5 @@
 <template>
-  <div class="material-box">
+  <div class="material-box h-full w-full relative">
     <div class="material-box__header">
       <slot name="header"></slot>
     </div>
@@ -15,3 +15,9 @@
 </template>
 
 <script setup lang="ts"></script>
+
+<style lang="less" scoped>
+.material-box{
+  border: 1px solid red;
+}
+</style>

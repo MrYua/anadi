@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@unocss/reset": "^0.50.4",
     "msw": "^1.1.0",
     "vue": "^3.2.45",
     "vue-grid-layout": "3.0.0-beta1",
@@ -25,6 +26,8 @@
     "@storybook/vue3": "7.0.0-rc.1",
     "@storybook/vue3-vite": "7.0.0-rc.1",
     "@types/node": "^18.15.1",
+    "@unocss/preset-uno": "^0.50.4",
+    "@unocss/transformer-directives": "^0.50.4",
     "@unocss/vite": "^0.50.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",

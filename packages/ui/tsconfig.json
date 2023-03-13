@@ -8,16 +8,20 @@
     "jsx": "preserve",
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true,
     "noEmit": true,
+    "allowJs": false,
     "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
-      "@*": ["src/*"],
-      "#*": ["types/*"]
+      "@/*": ["src/*"],
+      "#/*": ["types/*"]
     },
     "types": ["node", "vite/client"],
-    "typeRoots": ["./node_modules/@types/", "./types"]
+    "typeRoots": ["node_modules/@types/", "types"]
   },
   "include": [
     "src/**/*.ts",
