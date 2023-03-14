@@ -14,10 +14,10 @@ export type WithInstall<T> = T & {
 
 export type CustomComponent = Component & { displayName?: string };
 
-export const withInstall = <T extends CustomComponent>(
+export function withInstall<T extends CustomComponent>(
   component: T,
   alias?: string
-) => {
+) {
   (component as Record<string, unknown>).install = (app: App) => {
     const compName = component.name || component.displayName;
     if (!compName) return;
@@ -27,4 +27,4 @@ export const withInstall = <T extends CustomComponent>(
     }
   };
   return component as WithInstall<T>;
-};
+}

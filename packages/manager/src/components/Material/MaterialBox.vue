@@ -4,7 +4,7 @@
       <slot name="header"></slot>
     </div>
 
-    <div class="material-box__content flex-1-hidden" style=" border: 1px solid red;">
+    <div class="material-box__content flex-1-hidden">
       <slot></slot>
     </div>
 
@@ -18,6 +18,5 @@
 
 <style lang="less" scoped>
 .material-box {
- 
 }
 </style>

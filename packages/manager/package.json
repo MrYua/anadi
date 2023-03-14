@@ -1,5 +1,5 @@
 {
-  "name": "@anadi/ui",
+  "name": "@anadi/manager",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.50.4",
+    "@vueuse/core": "^9.13.0",
     "element-plus": "^2.3.0",
     "msw": "^1.1.0",
     "vue": "^3.2.45",
