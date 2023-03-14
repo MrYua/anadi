@@ -1,14 +1,14 @@
 <template>
-  <div class="material-box h-full w-full relative">
-    <div class="material-box__header">
+  <div class="material-box wh-full relative flex-col">
+    <div class="material-box__header" v-if="$slots.header">
       <slot name="header"></slot>
     </div>
 
-    <div class="material-box__content">
+    <div class="material-box__content flex-1-hidden" style=" border: 1px solid red;">
       <slot></slot>
     </div>
 
-    <div class="material-box__footer">
+    <div class="material-box__footer" v-if="$slots.footer">
       <slot name="footer"></slot>
     </div>
   </div>
@@ -17,7 +17,7 @@
 <script setup lang="ts"></script>
 
 <style lang="less" scoped>
-.material-box{
-  border: 1px solid red;
+.material-box {
+ 
 }
 </style>

@@ -11,6 +11,9 @@
     >
       <MaterialBox>
         {{ item.i }}
+        <template v-slot:footer>
+          <Timer name="footer" />
+        </template>
       </MaterialBox>
     </grid-item>
   </grid-layout>
@@ -18,6 +21,7 @@
 
 <script setup lang="ts">
 import MaterialBox from "@/components/Material";
+import { Timer } from "@/components/Timer";
 
 const layout = [
   { x: 0, y: 0, w: 2, h: 2, i: "0" },

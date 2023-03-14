@@ -2,12 +2,15 @@ import "@/plugins/uno.css";
 
 import { createApp } from "vue";
 import App from "@/App.vue";
-import { setupComponents } from "@/plugins/components";
+import { setupGrid } from "@/plugins/grid";
+import { setupElementPlus } from "@/plugins/element";
 
 async function bootstrap() {
   const app = createApp(App);
 
-  setupComponents(app);
+  setupElementPlus(app);
+
+  setupGrid(app);
 
   app.mount("#app");
 }

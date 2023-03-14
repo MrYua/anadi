@@ -1,6 +1,6 @@
 import { defineConfig } from "@unocss/vite";
-import presetUno from '@unocss/preset-uno';
-import transformerDirectives from '@unocss/transformer-directives';
+import presetUno from "@unocss/preset-uno";
+import transformerDirectives from "@unocss/transformer-directives";
 
 export default defineConfig({
   exclude: [
@@ -14,6 +14,16 @@ export default defineConfig({
     "mock",
     "index.html",
   ],
-  presets: [presetUno({ dark: 'class' })],
+  presets: [presetUno({ dark: "class" })],
   transformers: [transformerDirectives()],
+  shortcuts: {
+    "wh-full": "w-full h-full",
+    "flex-1-hidden": "flex-1 overflow-hidden",
+    "flex-col": "flex flex-col",
+    "nowrap-hidden": "whitespace-nowrap overflow-hidden",
+    "ellipsis-text": "nowrap-hidden text-ellipsis",
+  },
+  theme: {
+    colors: {},
+  },
 });
