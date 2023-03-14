@@ -24,6 +24,8 @@ export default defineConfig({
     "ellipsis-text": "nowrap-hidden text-ellipsis",
   },
   theme: {
-    colors: {},
+    colors: {
+      bg: "rgb(var(--bg-color))",
+    },
   },
 });

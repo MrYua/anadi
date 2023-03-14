@@ -16,7 +16,4 @@
 
 <script setup lang="ts"></script>
 
-<style lang="less" scoped>
-.material-box {
-}
-</style>
+<style lang="less" scoped></style>

@@ -1,5 +1,5 @@
 <template>
-  <grid-layout :layout.sync="layout">
+  <grid-layout :layout.sync="layout" class="bg">
     <grid-item
       v-for="item in layout"
       :x="item.x"
