@@ -43,5 +43,13 @@
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowAny": [
+        "vue",
+        "react"
+      ]
+    }
   }
 }
